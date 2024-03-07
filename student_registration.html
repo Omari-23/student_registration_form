@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> New Student Registration</title>
+  </head>
+  <body>
+    <form action="scripts/data.php" method="post" enctype="multipart/form-data" >
+      <label for="student_name"> Name: </label>
+      <input type = "text" name="student_name" id="student_name">
+      <br>
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob">
+      <br>
+      <fieldset>
+        <legend> Gender: </legend>
+        <input type = "radio" name= "gender" id="male" value="male">
+        <label for="male">Male</label>
+        <input type="radio" name="female" id="female" value="female">
+        <label for="female"> Female</label>
+      </fieldset>
+      <br>
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="4" cols="50"></textarea>
+      <br>
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+      <br>
+      <label for="email_address">Email: </label>
+      <input type="text" name="email_address" id="email_address">
+      <br>
+      <label for="courses">Select courses:</label>
+      <select id="courses" name="courses[]" multiple size="4">
+      <option value="web technologies">Web technologies</option>
+      <option value="python">Python</option>
+      <option value="Business">Business</option>
+      <option value="Javascript">Javascript</option>
+</select>
+<hr>
+<input type="button" value="cancel" onclick="">
+<input type="submit" value="Register">
+ </form>
+  </body>
+</html>
